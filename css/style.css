@@ -96,3 +96,9 @@ article {
 footer {
   border-top: 1px solid #aaa;
 }
+
+footer nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
