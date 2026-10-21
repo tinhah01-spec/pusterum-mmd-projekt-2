@@ -1,0 +1,98 @@
+body {
+  font-family: Iosevka Charon;
+  background-color: #f5f7f3;
+  color: #263b39;
+}
+
+h1 {
+  color: #315f5a;
+}
+
+:root {
+  --baggrund: #f5f3f3;
+  --flade: #ece9e9;
+  --tekst: #242424;
+  --dæmpet-tekst: #555;
+  --teal: #315f5a;
+  --rosa: #85565d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--baggrund);
+  color: var(--tekst);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header,
+main,
+footer {
+  width: min(100%, 402px);
+  margin: 0 auto;
+  padding: 1rem;
+  background: var(--flade);
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #aaa;
+}
+
+header > a {
+  color: var(--teal);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a,
+footer a {
+  color: var(--rosa);
+}
+
+main section:first-child {
+  padding: 1.5rem 0;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+main section:first-child > a {
+  display: inline-block;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  padding: 0.5rem 0.8rem;
+}
+
+main section:first-child > a:first-of-type {
+  background: var(--tekst);
+  color: white;
+  text-decoration: none;
+}
+
+main section + section {
+  padding: 1rem 0;
+}
+
+article {
+  margin: 1.5rem 0;
+}
+
+footer {
+  border-top: 1px solid #aaa;
+}
