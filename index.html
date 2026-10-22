@@ -7,17 +7,27 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <a href="#indhold">Spring til inhold</a>
+   
 
     <header>
-        <a href="index.html" aria-label="Pusterum - Forside">Pusterum</a>
+        <a href="index.html" class="logo">
+            <img src="img/pusterum-logo.png" alt="">
+        </a>
 
-        <nav aria-label="Hovedmenu"> 
-            <a href="index.html" aria-current="page">Forside</a>
-            <a href="mental-sundhed.html">Viden</a>
-            <a href="faa-hjaelp.html">Få hjælp</a>
-            <a href="kontakt.html">kontakt</a>
-        </nav>
+<a href="faa-hjaelp.html" class="help-link">Find hjælp</a>
+
+<details class="menu">
+  <summary>
+    <span class="menu-icon" aria-hidden="true">☰</span>
+    <span>Menu</span>
+  </summary>
+
+  <nav aria-label="Hovedmenu">
+    <a href="index.html">Forside</a>
+    <a href="mental-sundhed.html">Viden</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</details>
     </header>
 
     <main id="indhold">
@@ -27,9 +37,39 @@
             <p>Pusterum samler viden og inspiration om mental trivsel for unge.
                 Gå på opdagelse i emnet, eller find ud af, hvor du kan søge støtte.
             </p>
+            <section class="budskab" aria-label="Små budskaber fra Pusterum">
+  <div class="slide aktiv">
+    <img src="img/sky.png" alt="">
+    <p>Træk vejret. Tag ét skridt ad gangen.</p>
+  </div>
+
+  <div class="slide">
+    <img src="img/natur.png" alt="">
+    <p>Du behøver ikke klare det hele på én gang.</p>
+  </div>
+
+  <div class="slide">
+    <img src="img/glad.png" alt="">
+    <p>Det er okay at holde en pause.</p>
+  </div>
+
+  <div class="slide">
+    <img src="img/tale.png" alt="">
+    <p>Det kan hjælpe at sige det højt til nogen.</p>
+  </div>
+
+  <button type="button" class="slide-knap forrige" id="forrige" aria-label="Vis forrige budskab">‹</button>
+<button type="button" class="slide-knap naeste" id="naeste" aria-label="Vis næste budskab">›</button>
+</section>
             <a href="faa-hjaelp.html">Find hjælp</a>
             <a href="mental-sundhed.html">Læs om mental sundhed</a>
         </section>
+
+</section>
+
+<hr class="skillelinje">
+
+<section>
 
         <section>
             <h2>Hvor vil du begynde?</h2>
@@ -59,6 +99,26 @@
         </nav>
         
     </footer>
+    <script>
+  const slides = document.querySelectorAll(".slide");
+  let nuvaerendeSlide = 0;
+
+  function visSlide(index) {
+    slides[nuvaerendeSlide].classList.remove("aktiv");
+
+    nuvaerendeSlide = (index + slides.length) % slides.length;
+
+    slides[nuvaerendeSlide].classList.add("aktiv");
     
+  }
+
+  document.querySelector("#forrige").addEventListener("click", function () {
+    visSlide(nuvaerendeSlide - 1);
+  });
+
+  document.querySelector("#naeste").addEventListener("click", function () {
+    visSlide(nuvaerendeSlide + 1);
+  });
+</script>
 </body>
 </html>

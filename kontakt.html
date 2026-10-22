@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | Pusterum</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  
+
+  <header>
+    <a href="index.html" class="logo">
+      <img src="img/pusterum-logo.png" alt="Pusterum">
+    </a>
+
+    <a href="faa-hjaelp.html" class="help-link">Find hjælp</a>
+
+    <details class="menu">
+      <summary>
+        <span class="menu-icon" aria-hidden="true">☰</span>
+        <span>Menu</span>
+      </summary>
+
+      <nav aria-label="Hovedmenu">
+        <a href="index.html">Forside</a>
+        <a href="mental-sundhed.html">Viden</a>
+        <a href="kontakt.html" aria-current="page">Kontakt</a>
+      </nav>
+    </details>
+  </header>
+
+  <main id="indhold" class="kontakt-side">
+    <section class="kontakt-intro">
+      <p class="overlinje">Kontakt os</p>
+      <h1>Ræk ud</h1>
+      <p>
+        Har du spørgsmål til os eller noget på hjertet?
+        Du kan bruge kontaktformularen herunder.
+      </p>
+    </section>
+
+    <hr class="skillelinje">
+
+    <form class="kontakt-form">
+      <div>
+        <label for="navn">Dit navn</label>
+        <input type="text" id="navn" name="navn" autocomplete="name" required>
+      </div>
+
+      <div>
+        <label for="email">Din e-mail</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+      </div>
+
+      <div>
+        <label for="besked">Din besked</label>
+        <textarea id="besked" name="besked" rows="6" required></textarea>
+      </div>
+
+      <button class="kontakt-knap" type="button">Send besked</button>
+    </form>
+  </main>
+
+  <footer>
+    <nav aria-label="Bundmenu">
+      <a href="index.html">Forside</a>
+      <a href="mental-sundhed.html">Viden</a>
+      <a href="faa-hjaelp.html">Find hjælp</a>
+      <a href="kontakt.html" aria-current="page">Kontakt</a>
+    </nav>
+  </footer>
+</body>
+</html>

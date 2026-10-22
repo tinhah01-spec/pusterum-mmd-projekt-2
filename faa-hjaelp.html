@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find hjælp | Pusterum</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+
+    <header>
+        <a href="index.html" class="logo">
+            <img src="img/pusterum-logo.png" alt="">
+        </a>
+
+<a href="faa-hjaelp.html" class="help-link">Find hjælp</a>
+
+<details class="menu">
+  <summary>
+    <span class="menu-icon" aria-hidden="true">☰</span>
+    <span>Menu</span>
+  </summary>
+
+  <nav aria-label="Hovedmenu">
+    <a href="index.html">Forside</a>
+    <a href="mental-sundhed.html">Viden</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
+</details>
+    </header>
+
+    <main id="indhold" class="hjaelp-side">
+  <section class="intro-hjaelp">
+    <p class="overlinje">Du behøver ikke stå alene</p>
+    <h1>Find hjælp</h1>
+    <p class="intro-tekst">
+      Vælg det, der føles mest overskueligt. Du kan begynde med
+      en person, du allerede kender.
+    </p>
+  </section>
+
+  <hr class="skillelinje">
+
+  <section class="stoette-sektion" aria-labelledby="stoette-overskrift">
+    <h2 id="stoette-overskrift">Muligheder for støtte</h2>
+
+    <div class="stoette-liste">
+      <article>
+        <h3>En, du stoler på</h3>
+        <p>En ven, et familiemedlem eller en voksen, du har tillid til.</p>
+      </article>
+
+      <article>
+        <h3>På din uddannelse</h3>
+        <p>Undersøg, om der er en studievejleder eller trivselsmedarbejder.</p>
+      </article>
+
+      <article>
+        <h3>Professionel rådgivning</h3>
+        <p>Se efter en relevant rådgivningstjeneste og kontaktmuligheder.</p>
+      </article>
+    </div>
+  </section>
+
+  <aside class="akut-boks" aria-labelledby="akut-overskrift">
+    <h2 id="akut-overskrift">Akut fare?</h2>
+    <p>Hvis du eller en anden er i akut fare, så ring 112.</p>
+    <a href="tel:112">Ring 112</a>
+  </aside>
+
+  
+</main>
+
+    <footer>
+        <nav aria-label="Bundmenu">
+<a href="index.html">Forside</a>
+        <a href="mental-sundhed.html">Viden</a>
+        <a href="faa-hjaelp.html">Find hjælp</a>
+        <a href="kontakt.html">Kontakt</a>
+        
+        </nav>
+        
+    </footer>
+    <script>
+  const slides = document.querySelectorAll(".slide");
+  let nuvaerendeSlide = 0;
+
+  function visSlide(index) {
+    slides[nuvaerendeSlide].classList.remove("aktiv");
+
+    nuvaerendeSlide = (index + slides.length) % slides.length;
+
+    slides[nuvaerendeSlide].classList.add("aktiv");
+    
+  }
+
+  document.querySelector("#forrige").addEventListener("click", function () {
+    visSlide(nuvaerendeSlide - 1);
+  });
+
+  document.querySelector("#naeste").addEventListener("click", function () {
+    visSlide(nuvaerendeSlide + 1);
+  });
+</script>
+</body>
+</html>

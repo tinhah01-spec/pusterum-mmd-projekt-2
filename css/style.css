@@ -1,5 +1,5 @@
 body {
-  font-family: Iosevka Charon;
+ font-family: "Iosevka Charon", "Trebuchet MS", Arial, sans-serif;
   background-color: #f5f7f3;
   color: #263b39;
 }
@@ -25,7 +25,7 @@ body {
   margin: 0;
   background: var(--baggrund);
   color: var(--tekst);
-  font-family: Arial, sans-serif;
+  font-family: "Iosevka Charon", "Trebuchet MS", Arial, sans-serif;
   line-height: 1.6;
 }
 
@@ -101,4 +101,235 @@ footer nav {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
+}
+
+.help-link {
+  margin-left: auto;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.menu summary::-webkit-details-marker {
+  display: none;
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+}
+
+.menu nav {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: grid;
+  gap: 1rem;
+  min-width: 10rem;
+  padding: 1rem;
+  background: #f5f2f3;
+  border: 1px solid #aaa;
+  z-index: 10;
+}
+
+.budskab {
+  text-align: center;
+  background-color: #d9d9d9;
+  padding: 1.5rem;
+  margin: 2rem 0;
+   border: 1px solid #b8b8b8;
+}
+
+.budskab img {
+  display: block;
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  margin: 0 auto 0.75rem;
+ 
+}
+
+.budskab .slide {
+  display: none;
+}
+
+.budskab .slide.aktiv {
+  display: block;
+}
+
+.slide.aktiv {
+  display: block;
+}
+
+.budskab {
+  position: relative;
+}
+
+.slide-knap {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.slide-knap.forrige {
+  left: 0.5rem;
+}
+
+.slide-knap.naeste {
+  right: 0.5rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logo img {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+
+.hjaelp-side .intro-hjaelp {
+  padding: 1.5rem 0;
+}
+
+.hjaelp-side .overlinje {
+  margin: 0 0 0.5rem;
+  color: var(--dæmpet-tekst);
+}
+
+.hjaelp-side h1 {
+  margin: 0 0 0.75rem;
+}
+
+.hjaelp-side .intro-tekst {
+  margin: 0;
+}
+
+.hjaelp-side .skillelinje {
+  border: 0;
+  border-top: 1px solid #777;
+  margin: 0 0 2rem;
+}
+
+.hjaelp-side .stoette-sektion {
+  padding: 0;
+}
+
+.stoette-liste {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.stoette-liste article {
+  margin: 0;
+}
+
+.stoette-liste h3 {
+  margin-bottom: 0.35rem;
+}
+
+.stoette-liste p {
+  margin: 0;
+}
+
+.akut-boks {
+  margin: 2.5rem 0 1.25rem;
+  padding: 1.5rem;
+  background-color: #d9d9d9;
+  text-align: center;
+}
+
+.akut-boks h2 {
+  margin-top: 0;
+}
+
+.akut-boks a,
+.kontakt-knap {
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  background-color: var(--tekst);
+  color: white;
+  text-decoration: none;
+}
+
+.kontakt-side .kontakt-intro {
+  padding: 1.5rem 0;
+}
+
+.kontakt-side .overlinje {
+  margin-bottom: 0.5rem;
+  color: var(--dæmpet-tekst);
+}
+
+.kontakt-side h1 {
+  margin-bottom: 0.75rem;
+}
+
+.kontakt-side .skillelinje {
+  border: 0;
+  border-top: 1px solid #777;
+  margin: 0 0 2rem;
+}
+
+.kontakt-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.kontakt-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+.kontakt-form input,
+.kontakt-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #aaa;
+  background: white;
+  color: var(--tekst);
+  font: inherit;
+}
+
+.kontakt-form textarea {
+  resize: vertical;
+}
+
+.kontakt-form button {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.kontakt-form input:focus-visible,
+.kontakt-form textarea:focus-visible,
+.kontakt-form button:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 2px;
 }
