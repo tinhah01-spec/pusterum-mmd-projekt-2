@@ -38,27 +38,15 @@
       Små råd og viden om mental trivsel – i et tempo, der passer dig.
     </p>
 
-    <div class="billedboks">
-      <img src="img/sky.png" alt="" class="velkomst-ikon">
-      <p>Træk vejret. Tag ét skridt ad gangen.</p>
-    </div>
-
-    <div class="knapper">
-      <a href="faa-hjaelp.html" class="knap">Find hjælp</a>
-      <a href="mental-sundhed.html" class="tekst-link">Udforsk emnet</a>
-    </div>
-  </section>
-
-  <section class="valg">
-    <h2>Hvad har du brug for lige nu?</h2>
-
-    <div class="valgkort">
-      <img src="img/natur.png" alt="" class="kort-ikon">
-      <div>
-        <h3>Bliv klogere på mental sundhed</h3>
-        <p>Læs om trivsel, tanker og små pauser i hverdagen.</p>
-        <a href="mental-sundhed.html">Gå til viden</a>
+    <div class="billedboks slideshow">
+      <button class="slide-pil forrige" type="button" aria-label="Vis forrige råd">‹</button>
+      <div class="slides">
+        <div class="slide aktiv"><img src="img/sky.png" alt="" class="velkomst-ikon"><p>Træk vejret. Tag ét skridt ad gangen.</p></div>
+        <div class="slide"><img src="img/natur.png" alt="" class="velkomst-ikon"><p>Du behøver ikke klare det hele på én gang.</p></div>
+        <div class="slide"><img src="img/glad.png" alt="" class="velkomst-ikon"><p>Det er okay at holde en pause.</p></div>
+        <div class="slide"><img src="img/tale.png" alt="" class="velkomst-ikon"><p>Det kan hjælpe at sige det højt til nogen.</p></div>
       </div>
+      <button class="slide-pil næste" type="button" aria-label="Vis næste råd">›</button>
     </div>
 
     <div class="valgkort">
@@ -90,25 +78,27 @@
         </nav>
         
     </footer>
-    <script>
+  <script>
   const slides = document.querySelectorAll(".slide");
-  let nuvaerendeSlide = 0;
+  const forrigeKnap = document.querySelector(".forrige");
+  const næsteKnap = document.querySelector(".næste");
 
-  function visSlide(index) {
-    slides[nuvaerendeSlide].classList.remove("aktiv");
+  let aktivSlide = 0;
 
-    nuvaerendeSlide = (index + slides.length) % slides.length;
+  function visSlide(nytNummer) {
+    slides[aktivSlide].classList.remove("aktiv");
 
-    slides[nuvaerendeSlide].classList.add("aktiv");
-    
+    aktivSlide = (nytNummer + slides.length) % slides.length;
+
+    slides[aktivSlide].classList.add("aktiv");
   }
 
-  document.querySelector("#forrige").addEventListener("click", function () {
-    visSlide(nuvaerendeSlide - 1);
+  forrigeKnap.addEventListener("click", () => {
+    visSlide(aktivSlide - 1);
   });
 
-  document.querySelector("#naeste").addEventListener("click", function () {
-    visSlide(nuvaerendeSlide + 1);
+  næsteKnap.addEventListener("click", () => {
+    visSlide(aktivSlide + 1);
   });
 </script>
 </body>
